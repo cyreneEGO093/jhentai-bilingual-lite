@@ -6,7 +6,7 @@ import 'reader_translation_controller.dart';
 import 'translation_store.dart';
 import 'translation_pointer_area.dart';
 
-/// Image-relative content only. Controls belong to the reader viewport.
+/// Image-relative translations and edit handles; the toolbar stays in the viewport.
 class TranslationImageLayer extends StatefulWidget {
   final String imageId;
   final int pageIndex;
@@ -133,6 +133,9 @@ class _TranslationImageLayerState extends State<TranslationImageLayer> {
         return Stack(key: _surfaceKey, clipBehavior: Clip.hardEdge, children: [
           if (page.visible)
             for (var i = 0; i < page.bubbles.length; i++) _bubble(i, size),
+          if (page.visible && controller.editing)
+            for (var i = 0; i < page.bubbles.length; i++)
+              ..._bubbleHandles(i, size),
           if (active && controller.selecting)
             Positioned.fill(
                 child: MouseRegion(
@@ -175,10 +178,6 @@ class _TranslationImageLayerState extends State<TranslationImageLayer> {
         controller.activeIndex == widget.pageIndex &&
         controller.selectedBubble == index;
     final settings = translationStore.settings;
-    final desktop = switch (Theme.of(context).platform) {
-      TargetPlatform.android || TargetPlatform.iOS => false,
-      _ => true,
-    };
     return Positioned.fromRect(
         rect: Rect.fromLTWH(r.left * size.width, r.top * size.height,
             r.width * size.width, r.height * size.height),
@@ -191,6 +190,8 @@ class _TranslationImageLayerState extends State<TranslationImageLayer> {
                       onTap: () => controller.select(widget.pageIndex, index),
                       onStart: (d) => _beginDrag(index, d.globalPosition),
                       onUpdate: (d) => _drag(index, d.globalPosition),
+                      onEnd: (_) => _endDrag(),
+                      onCancel: _endDrag,
                       child: Container(
                           padding: const EdgeInsets.all(4),
                           decoration: BoxDecoration(
@@ -213,23 +214,70 @@ class _TranslationImageLayerState extends State<TranslationImageLayer> {
                                               fontSize: settings.fontSize,
                                               height: 1.25,
                                               decoration: TextDecoration.none)))))))),
-              if (selected && desktop)
-                Positioned(
-                    right: 0,
-                    bottom: 0,
-                    width: 20,
-                    height: 20,
-                    child: MouseRegion(
-                        cursor: SystemMouseCursors.resizeDownRight,
-                        child: TranslationPointerArea(
-                            key: const Key('translation-resize-corner'),
-                            onStart: (d) => _beginDrag(index, d.globalPosition,
-                                resize: true),
-                            onUpdate: (d) => _drag(index, d.globalPosition),
-                            child: const ColoredBox(
-                                color: Colors.blue,
-                                child: Icon(Icons.south_east,
-                                    size: 15, color: Colors.white))))),
             ])));
+  }
+
+  List<Widget> _bubbleHandles(int index, Size size) {
+    final bubble = _controller!.page(widget.pageIndex).bubbles[index];
+    final r = bubble.bounds;
+    final mobile = Theme.of(context).platform == TargetPlatform.android ||
+        Theme.of(context).platform == TargetPlatform.iOS;
+    final extent =
+        (mobile ? 32.0 : 24.0).clamp(0.0, size.shortestSide / 2).toDouble();
+    Offset bounded(double x, double y) => Offset(
+        x.clamp(0.0, size.width - extent).toDouble(),
+        y.clamp(0.0, size.height - extent).toDouble());
+    var move = bounded(r.left * size.width, r.top * size.height);
+    var resize =
+        bounded(r.right * size.width - extent, r.bottom * size.height - extent);
+    // Tiny/edge bubbles still need two separate, reachable hit targets.
+    if ((move & Size.square(extent)).overlaps(resize & Size.square(extent))) {
+      move = Offset(
+          (r.center.dx * size.width - extent)
+              .clamp(0.0, size.width - extent * 2)
+              .toDouble(),
+          (r.center.dy * size.height - extent / 2)
+              .clamp(0.0, size.height - extent)
+              .toDouble());
+      resize = move + Offset(extent, 0);
+    }
+    Widget handle(Offset position, bool resizing) => Positioned(
+        left: position.dx,
+        top: position.dy,
+        width: extent,
+        height: extent,
+        child: MouseRegion(
+            cursor: resizing
+                ? SystemMouseCursors.resizeDownRight
+                : SystemMouseCursors.move,
+            child: Semantics(
+                label: resizing ? '拖动缩放译文框' : '拖动移动译文框',
+                child: TranslationPointerArea(
+                    key: ValueKey(
+                        'translation-${resizing ? 'resize' : 'move'}-corner-${widget.pageIndex}-$index'),
+                    onTap: () => _controller!.select(widget.pageIndex, index),
+                    onStart: (d) =>
+                        _beginDrag(index, d.globalPosition, resize: resizing),
+                    onUpdate: (d) => _drag(index, d.globalPosition),
+                    onEnd: (_) => _endDrag(),
+                    onCancel: _endDrag,
+                    child: Center(
+                        child: Container(
+                            width: mobile ? 24 : 20,
+                            height: mobile ? 24 : 20,
+                            decoration: BoxDecoration(
+                                color: const Color(0xff215947),
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(4)),
+                            child: Icon(
+                                resizing ? Icons.south_east : Icons.open_with,
+                                size: mobile ? 18 : 15,
+                                color: Colors.white)))))));
+    return [handle(move, false), handle(resize, true)];
+  }
+
+  void _endDrag() {
+    _dragBounds = null;
+    _dragStart = null;
   }
 }

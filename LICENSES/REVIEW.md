@@ -1,7 +1,9 @@
-# Distribution review — 8.0.16-bilingual.3+337
+# Distribution review — 8.0.16-bilingual.4+338
 
 The combined derivative is released under **GPL-3.0-only**. This review covers
 the locked source and Windows x64 / Android arm64 release, not future updates.
+The .4 UI update introduces no new dependencies; the dependency lock and notices
+remain unchanged from the .3 review.
 
 ## Provenance and compatibility
 

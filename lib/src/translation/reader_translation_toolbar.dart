@@ -115,6 +115,91 @@ class _ReaderTranslationToolbarState extends State<ReaderTranslationToolbar> {
     widget.onPageSelected?.call(index);
   }
 
+  Widget _dragArea(
+          {required Widget child,
+          required Size viewport,
+          required double width,
+          required Offset origin,
+          required double scale,
+          Key? key,
+          VoidCallback? onTap}) =>
+      MouseRegion(
+          cursor: SystemMouseCursors.move,
+          child: TranslationPointerArea(
+              key: key,
+              onTap: onTap,
+              onStart: (d) {
+                _dragStart = d.globalPosition;
+                _positionStart = origin;
+              },
+              onUpdate: (d) {
+                if (_dragStart == null || viewport.isEmpty) {
+                  return;
+                }
+                final p = _positionStart! + d.globalPosition - _dragStart!;
+                setState(() => _position = Offset(
+                    p.dx.clamp(0.0, math.max(0.0, viewport.width - width)) /
+                        viewport.width,
+                    p.dy.clamp(
+                            0.0, math.max(0.0, viewport.height - 48 * scale)) /
+                        viewport.height));
+              },
+              onEnd: (_) => _endToolbarDrag(),
+              onCancel: _endToolbarDrag,
+              child: child));
+
+  void _endToolbarDrag() {
+    _dragStart = null;
+    _positionStart = null;
+  }
+
+  Widget _header(Size viewport, double width, Offset origin, double scale) {
+    final toggle = IconButton(
+        key: const Key('image-translation-tools'),
+        tooltip: _expanded ? '收起翻译工具' : '展开翻译工具（拖动可移动）',
+        iconSize: 22 * scale,
+        constraints:
+            BoxConstraints(minWidth: 48 * scale, minHeight: 48 * scale),
+        icon: Icon(_expanded ? Icons.close : Icons.translate),
+        onPressed: () => setState(() => _expanded = !_expanded));
+    if (!_expanded) {
+      return _dragArea(
+          viewport: viewport,
+          width: width,
+          origin: origin,
+          scale: scale,
+          onTap: () => setState(() => _expanded = true),
+          child: toggle);
+    }
+    return SizedBox(
+        height: 48 * scale,
+        child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Expanded(
+              child: _dragArea(
+                  key: const Key('translation-toolbar-drag-bar'),
+                  viewport: viewport,
+                  width: width,
+                  origin: origin,
+                  scale: scale,
+                  child: Semantics(
+                      label: '拖动翻译工具栏',
+                      child: ColoredBox(
+                          color: Colors.white10,
+                          child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              child: Row(children: [
+                                Icon(Icons.drag_indicator, size: 20 * scale),
+                                const SizedBox(width: 6),
+                                const Expanded(
+                                    child: Text('双语轻译 · 拖动',
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis)),
+                              ])))))),
+          toggle,
+        ]));
+  }
+
   @override
   Widget build(BuildContext context) => Positioned.fill(
           child: SafeArea(child: LayoutBuilder(builder: (context, constraints) {
@@ -149,49 +234,8 @@ class _ReaderTranslationToolbarState extends State<ReaderTranslationToolbar> {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    TranslationPointerArea(
-                                        onTap: () => setState(
-                                            () => _expanded = !_expanded),
-                                        onStart: (d) {
-                                          _dragStart = d.globalPosition;
-                                          _positionStart = Offset(left, top);
-                                        },
-                                        onUpdate: (d) {
-                                          if (_dragStart == null) {
-                                            return;
-                                          }
-                                          final p = _positionStart! +
-                                              d.globalPosition -
-                                              _dragStart!;
-                                          setState(() => _position = Offset(
-                                              p.dx.clamp(
-                                                      0.0,
-                                                      math.max(0.0,
-                                                          size.width - width)) /
-                                                  size.width,
-                                              p.dy.clamp(
-                                                      0.0,
-                                                      math.max(
-                                                          0.0,
-                                                          size.height -
-                                                              48 * scale)) /
-                                                  size.height));
-                                        },
-                                        child: IconButton(
-                                            key: const Key(
-                                                'image-translation-tools'),
-                                            tooltip: _expanded
-                                                ? '收起翻译工具（拖动可移动）'
-                                                : '展开翻译工具（拖动可移动）',
-                                            iconSize: 22 * scale,
-                                            constraints: BoxConstraints(
-                                                minWidth: 48 * scale,
-                                                minHeight: 48 * scale),
-                                            icon: Icon(_expanded
-                                                ? Icons.close
-                                                : Icons.translate),
-                                            onPressed: () => setState(
-                                                () => _expanded = !_expanded))),
+                                    _header(
+                                        size, width, Offset(left, top), scale),
                                     if (_expanded)
                                       Flexible(
                                           child: SingleChildScrollView(
@@ -300,7 +344,7 @@ class _ReaderTranslationToolbarState extends State<ReaderTranslationToolbar> {
                                                         ]),
                                                         if (c.editing) ...[
                                                           const Text(
-                                                              '点选译文框后直接拖动，或拖动下方按钮移动、缩放。'),
+                                                              '拖动框左上角移动，右下角缩放；也可点选框后使用下方按钮。'),
                                                           Wrap(children: [
                                                             _editHandle(
                                                                 '移动', false),

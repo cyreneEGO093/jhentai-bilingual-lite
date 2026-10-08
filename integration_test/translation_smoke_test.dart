@@ -226,25 +226,31 @@ void main() {
           toolRect);
       zoom.scale = 1.0;
       await tester.pump(const Duration(milliseconds: 400));
+      expect(
+          find.byKey(const Key('translation-move-corner-0-0')), findsNothing);
       await tester.tap(find.text('调整'));
       await tester.pump();
       final bubbleFinder = find.byKey(const Key('translation-bubble-0'));
       // Move the toolbar away from the first bubble before dragging it.
-      await tester.drag(find.byKey(const Key('image-translation-tools')),
-          const Offset(0, 200));
+      await tester.drag(find.byKey(const Key('translation-toolbar-drag-bar')),
+          const Offset(0, 400));
       await tester.pump();
-      await tester.drag(bubbleFinder, const Offset(15, 20));
+      await tester.drag(find.byKey(const Key('translation-move-corner-0-0')),
+          const Offset(15, 20));
       await tester.pump();
       expect(tester.getRect(bubbleFinder).left, greaterThan(before.left));
-      await tester
-          .ensureVisible(find.byKey(const Key('translation-resize-handle')));
-      await tester.drag(find.byKey(const Key('translation-resize-handle')),
+      await tester.drag(find.byKey(const Key('translation-resize-corner-0-0')),
           const Offset(20, 20));
       await tester.pump();
       expect(tester.getRect(bubbleFinder).width, greaterThan(before.width));
       await tester.ensureVisible(find.text('完成调整'));
       await tester.tap(find.text('完成调整'));
       await tester.pump();
+      expect(
+          find.byKey(const Key('translation-move-corner-0-0')), findsNothing);
+      expect(
+          find.byKey(const Key('translation-resize-corner-0-0')), findsNothing);
+      await tester.ensureVisible(find.byKey(const Key('snip-image')));
       await tester.tap(find.byKey(const Key('snip-image')));
       await tester.pump();
       final surface =
@@ -266,6 +272,8 @@ void main() {
       expect(requests.length, 5);
       expect(imageDownloads, 3);
       expect(find.byKey(const Key('image-translation-tools')), findsOneWidget);
+      await tester.pump(const Duration(milliseconds: 250));
+      session.toggleEditing();
       await tester.pump(const Duration(milliseconds: 250));
       final boundary = screenshotKey.currentContext!.findRenderObject()!
           as RenderRepaintBoundary;
