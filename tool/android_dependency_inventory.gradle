@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// From android/: gradlew -I ../tool/android_dependency_inventory.gradle
+// :app:bilingualDependencyReport -Ptarget-platform=android-arm64
+// Paths are deliberately omitted from the public inventory.
+gradle.projectsEvaluated {
+    def app = gradle.rootProject.findProject(':app')
+    if (app == null) return // Flutter's included Gradle-plugin build has no app.
+    app.tasks.register('bilingualDependencyReport') {
+        doLast {
+            def components = app.configurations.releaseRuntimeClasspath.incoming.resolutionResult.allComponents
+            def modules = components.findAll {
+                it.id instanceof org.gradle.api.artifacts.component.ModuleComponentIdentifier
+            }.collect {
+                def id = it.id
+                [group: id.group, name: id.module, version: id.version]
+            }.unique().sort { a, b -> "${a.group}:${a.name}" <=> "${b.group}:${b.name}" }
+            def destination = new File(app.rootProject.projectDir.parentFile, 'LICENSES/android-dependencies.json')
+            destination.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(modules)) + '\n'
+            println "Recorded ${modules.size()} Android runtime artifacts."
+        }
+    }
+}

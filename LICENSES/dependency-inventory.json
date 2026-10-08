@@ -1,0 +1,2284 @@
+[
+  {
+    "package": "_fe_analyzer_shared",
+    "version": "67.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "efa31b5ac790016736fa9761642b0af16d37cd4fb483de2905adb5258cb89722"
+    }
+  },
+  {
+    "package": "analyzer",
+    "version": "6.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "7e124af6a556f045cb3a20cafbdaa31602ac2c82cbcb3c3b15faaaf514b06028"
+    }
+  },
+  {
+    "package": "analyzer_plugin",
+    "version": "0.11.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b9b748d4dd6f725387bf69e96df4e4ebff167ae83547954242a731504d037644"
+    }
+  },
+  {
+    "package": "android_intent_plus",
+    "version": "5.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "animate_do",
+    "version": "3.3.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "eb843acfb3cf5cf54545beb8cdac3f64a2d4f082057c8a7babbe67c513dff803"
+    }
+  },
+  {
+    "package": "animated_flip_counter",
+    "version": "0.2.6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1935b85d61b80cf901a30043f2c4699cfc8bc8af148c9c006598ca863b5fbc19"
+    }
+  },
+  {
+    "package": "archive",
+    "version": "3.6.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "32f97d332eae7453ec4079858e6f1d74be85beeb6d3881068b47d02a379cccea"
+    }
+  },
+  {
+    "package": "args",
+    "version": "2.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791"
+    }
+  },
+  {
+    "package": "asn1lib",
+    "version": "1.5.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b0db8d3a93ea33f852d2b6dfa9c38fc57d33a51c31b47ca528df6d02700f2a42"
+    }
+  },
+  {
+    "package": "async",
+    "version": "2.11.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "audio_session",
+    "version": "0.1.23",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2568490c678ba27cc8a405238637c4ba76adc632232f05dc1c36cbf59381dba4"
+    }
+  },
+  {
+    "package": "battery_plus",
+    "version": "6.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "battery_plus_platform_interface",
+    "version": "2.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "blur",
+    "version": "3.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "dfd0102c184f949370424a4f02c4bd679c094a1f429b285b536768e04c6d199d"
+    }
+  },
+  {
+    "package": "boolean_selector",
+    "version": "2.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a"
+    }
+  },
+  {
+    "package": "build",
+    "version": "2.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a4b5d7d31626e90b77e8696f1c47643aa31f52e17c1907c1ab60b068110e6e10"
+    }
+  },
+  {
+    "package": "build_config",
+    "version": "1.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+    }
+  },
+  {
+    "package": "build_daemon",
+    "version": "4.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+    }
+  },
+  {
+    "package": "build_resolvers",
+    "version": "2.4.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+    }
+  },
+  {
+    "package": "build_runner",
+    "version": "2.4.13",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a4b5d7d31626e90b77e8696f1c47643aa31f52e17c1907c1ab60b068110e6e10"
+    }
+  },
+  {
+    "package": "build_runner_core",
+    "version": "7.3.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+    }
+  },
+  {
+    "package": "built_collection",
+    "version": "5.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "d109c9f835f5ea80e9ea3d5ef34c4615f8f961f094be442828c2caee3d86c6bc",
+      "LICENSE": "4f1b0f444c862e8dc586122c00592538fb0e9dd6d81a5214882b25b8054f7dfa"
+    }
+  },
+  {
+    "package": "built_value",
+    "version": "8.9.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "8b9ed02f7dc553188ba0e90940aa61ce906adc548a3eea7ca44822677c7310b9",
+      "LICENSE": "4f1b0f444c862e8dc586122c00592538fb0e9dd6d81a5214882b25b8054f7dfa"
+    }
+  },
+  {
+    "package": "cached_network_image",
+    "version": "3.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+    }
+  },
+  {
+    "package": "cached_network_image_platform_interface",
+    "version": "3.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+    }
+  },
+  {
+    "package": "cached_network_image_web",
+    "version": "1.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+    }
+  },
+  {
+    "package": "characters",
+    "version": "1.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "ce28e9ebbf4e63fa5f0e890ec4674bbdb7b37e9a5375d21749ae280471d55bed",
+      "LICENSE": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+    }
+  },
+  {
+    "package": "charcode",
+    "version": "1.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "dba74a02efca89ba8451f7715069c44b21ba3aace6aa9df9e41fc493150de156",
+      "LICENSE": "8a4dbe6d3ddcf937b18d1768d13f9ba718b45bcb43bc00a3b63eb160d264acf7"
+    }
+  },
+  {
+    "package": "checked_yaml",
+    "version": "2.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "4771d808721f4d5f02318ab857c92f5a5dce87b14ae1c3770fe21ca7fd4a9280"
+    }
+  },
+  {
+    "package": "chewie",
+    "version": "1.7.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1e9a2c3170ece87769a7e18f67f422056750b10ffc1efcc8dade6a53fca09a8c"
+    }
+  },
+  {
+    "package": "cli_util",
+    "version": "0.4.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "c70d47ac6489c936a8713f8b557be5de8a5a3de21051f969579452a9f2f2eb27",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "clipboard",
+    "version": "0.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1220314d93d7c94481b2ec2ca3353ed905236fbdd17604daa7a31657ab01faf8"
+    }
+  },
+  {
+    "package": "clock",
+    "version": "1.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    }
+  },
+  {
+    "package": "code_builder",
+    "version": "4.10.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "f86d85f28d0b3c9ffd2ebfc1d9f976d8f9c76f65e66c3ded24d37765a9af0ead",
+      "LICENSE": "a4b5d7d31626e90b77e8696f1c47643aa31f52e17c1907c1ab60b068110e6e10"
+    }
+  },
+  {
+    "package": "collection",
+    "version": "1.19.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "9965f6b5036c40458713a1df4c9dd62fdad957fc600917c6b2634b47c240fb17",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "convert",
+    "version": "3.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "coverage",
+    "version": "1.11.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "8ccdec4525e3e5f9f71a0aa936e71e69381ea24521077c95478728b3c1411bda",
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "cross_file",
+    "version": "0.3.4+2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "7115f072c16c580ccad1ba3325c577cf326a37bd319987745edb508002e666e5",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "crypto",
+    "version": "3.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "csslib",
+    "version": "0.17.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791",
+      "third_party/bootstrap/LICENSE": "5b30317c9c35bb6f05101c501de866cc6852ab9b655dcf5941733f6644c3ebd0",
+      "third_party/foundation/LICENSE": "843c77d20bdacda0cf3d51773abd90b24abbd26283e89f44c6a65ef820a5622f",
+      "third_party/html5-boilerplate/LICENSE.txt": "38dbda1787367225469ead815b992e54c5107201353821eaf3dcb30f03d4d322",
+      "third_party/materialize/LICENSE": "20ab3407df4d2cf116be802ff41a19f853250701a4150337092bae214b996279",
+      "third_party/mdc/LICENSE": "d6cf3b8854951ec25fe35dbdca789ff2d5a9b95d2412abe935706fcb99545de0",
+      "third_party/pure/LICENSE": "66fe80191874ef13229c0f0f87d28ac25f0942b32c002a1fe49d9cd331e6b3dc",
+      "third_party/skeleton/LICENSE.md": "acb91cd1c2a9c35a417fe5692fdfdeea98065556c47e621e0f955a92a5818c30"
+    }
+  },
+  {
+    "package": "csv",
+    "version": "5.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "30629c60a6dd789fcaa15d7dd295825d7bde95a9027849497e9e53ef35868c4b"
+    }
+  },
+  {
+    "package": "cupertino_icons",
+    "version": "1.0.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "310d6ab6483280280c9db122bded0a63c09558bc5743720f61dbcbb494db370a"
+    }
+  },
+  {
+    "package": "dart_style",
+    "version": "2.3.6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "248e79f516fa2e251121f5e84e9ee36794c9ed2cbc22a17158009cc961406316",
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "dbus",
+    "version": "0.7.10",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    }
+  },
+  {
+    "package": "desktop_webview_window",
+    "version": "0.2.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a55c9a66896d03acc6e7a414112bd84b43284d85716472edc56be68a6da5ba92",
+      "windows/wil/LICENSE": "dea9265341829002e2c23a7372393eb2ed6e26085fb623f38a4ba0af833f30a6"
+    }
+  },
+  {
+    "package": "device_info_plus",
+    "version": "11.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "device_info_plus_platform_interface",
+    "version": "7.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "dio",
+    "version": "5.4.3+1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "0fa719eb77fa307fb1f5a0c0b060f5170ad0e559e904c4bfc3bef21a678f641f"
+    }
+  },
+  {
+    "package": "dotted_border",
+    "version": "2.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a0135332d9458f6aec356a33563d75394cc32c6443e47c8f33fefcb5c3789796"
+    }
+  },
+  {
+    "package": "drift",
+    "version": "2.21.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "31f84e4edff98f0238a5bef1c2ce754e401fbab149782f0ff4dc9b68fd086f75"
+    }
+  },
+  {
+    "package": "drift_dev",
+    "version": "2.21.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "31f84e4edff98f0238a5bef1c2ce754e401fbab149782f0ff4dc9b68fd086f75"
+    }
+  },
+  {
+    "package": "encrypt",
+    "version": "5.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c127a9250631c1ae489f6372c4093602c5959d415cd8b52f9e49307f7b506a48"
+    }
+  },
+  {
+    "package": "executor",
+    "version": "2.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "71163e8e32906a5b94dcb4031e31071c1d93892474e6016d6c8876672b17fd5e"
+    }
+  },
+  {
+    "package": "extended_image",
+    "version": "8.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b6c05126910f5644f7d94b9420c8820735ce0a5d55ca2e40351fad82aa6965d0"
+    }
+  },
+  {
+    "package": "extended_image_library",
+    "version": "3.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b6c05126910f5644f7d94b9420c8820735ce0a5d55ca2e40351fad82aa6965d0"
+    }
+  },
+  {
+    "package": "extended_list_library",
+    "version": "3.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b6c05126910f5644f7d94b9420c8820735ce0a5d55ca2e40351fad82aa6965d0"
+    }
+  },
+  {
+    "package": "extended_nested_scroll_view",
+    "version": "6.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c27b74b426221fe9e9488bdaab66fbd464156d1ccb5a44bfd66927fa80e8bc39"
+    }
+  },
+  {
+    "package": "fake_async",
+    "version": "1.3.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    }
+  },
+  {
+    "package": "ffi",
+    "version": "2.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "ce28e9ebbf4e63fa5f0e890ec4674bbdb7b37e9a5375d21749ae280471d55bed",
+      "LICENSE": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+    }
+  },
+  {
+    "package": "file",
+    "version": "7.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f6df86b1412172537273e8e80ee2fb8a66aa7307ce0b39ea5ddab47ca41b8c49"
+    }
+  },
+  {
+    "package": "file_picker",
+    "version": "8.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6278994817bd65fa32404e53c3a62a09d824d3f9a71f7fadcaca3e4f02641d66"
+    }
+  },
+  {
+    "package": "fixnum",
+    "version": "1.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "248e79f516fa2e251121f5e84e9ee36794c9ed2cbc22a17158009cc961406316",
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "flex_color_picker",
+    "version": "3.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "example/LICENSE": "976ebd9306118c1cf51efc1f7c50ef3ea9d4f5b1d8aa550579629ce1c4821062",
+      "LICENSE": "976ebd9306118c1cf51efc1f7c50ef3ea9d4f5b1d8aa550579629ce1c4821062"
+    }
+  },
+  {
+    "package": "flex_seed_scheme",
+    "version": "1.5.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "lib/src/mcu/LICENSE": "e662e6c2fc7ba7bc613c7e4ddf852d4ad3fcc05faead7cbe16b1dac67b55f426",
+      "LICENSE": "bfc6a36bbc216bf59c2f2dde3730fe874acdd2e09a8a83c75ffb69da342ed678"
+    }
+  },
+  {
+    "package": "flutter",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "flutter_cache_manager",
+    "version": "3.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c18c2b23af83fdb3dc1c857b1df7561f7807fc3667a01d9475878733258d840e"
+    }
+  },
+  {
+    "package": "flutter_displaymode",
+    "version": "0.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1cab76dfbc9cc435f85bfe2261b8edf3bf856c0e5ce5ac880f9409a7f9a06a11"
+    }
+  },
+  {
+    "package": "flutter_draggable_gridview",
+    "version": "0.0.7",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "d0cd2ff9846a0500790b81e175699a9d16c77ea806b802c1a1b47caa2cf43c02"
+    }
+  },
+  {
+    "package": "flutter_driver",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "flutter_launcher_icons",
+    "version": "0.14.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "02c454256448927423b4c0e517a083cadf78a8d9467a9d31ad3b4f4ff48ff7ca"
+    }
+  },
+  {
+    "package": "flutter_lints",
+    "version": "1.0.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "flutter_list_view",
+    "version": "1.1.21",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a067cb4240d04971c99fbc60fde0597148803d5b130333bc701132c6bdeb169e"
+    }
+  },
+  {
+    "package": "flutter_localizations",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "flutter_plugin_android_lifecycle",
+    "version": "2.0.24",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "flutter_rating_bar",
+    "version": "4.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "bfc72878da4fa54b21b724a77380fa0103df3acef73bca311dcc4a2403f6ca73"
+    }
+  },
+  {
+    "package": "flutter_resizable_container",
+    "version": "2.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ae0c25fd4f8e6e1b42b58426c39bf3cdf09f52109bb3ab83d05a8ed389e2a8d0"
+    }
+  },
+  {
+    "package": "flutter_secure_storage",
+    "version": "9.2.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_secure_storage_linux",
+    "version": "1.2.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_secure_storage_macos",
+    "version": "3.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_secure_storage_platform_interface",
+    "version": "1.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_secure_storage_web",
+    "version": "1.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_secure_storage_windows",
+    "version": "3.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "55dafb084270616f95b9bea53654adda8bdcad95c022a83c4cf8769073f829fa"
+    }
+  },
+  {
+    "package": "flutter_slidable",
+    "version": "3.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a0a451de67235d8461fc55afdd630761c0c7cfe290f27ef174e98aeff9c6a025"
+    }
+  },
+  {
+    "package": "flutter_socks_proxy",
+    "version": "0.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "062efeeb0ee74c7fc55e855049daebf814002841490add5c6c59fe615ba04ed1"
+    }
+  },
+  {
+    "package": "flutter_svg",
+    "version": "2.0.17",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "dc54ae36c905edfbf3c6678ee34d8da5989d7ccc7b993857a9d89db06a67eb18"
+    }
+  },
+  {
+    "package": "flutter_test",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "flutter_web_plugins",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "flutter_widget_from_html",
+    "version": "0.15.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "flutter_widget_from_html_core",
+    "version": "0.15.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "flutter_windowmanager_plus",
+    "version": "1.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a7e4bcb940fc15db406dc15c28b7c27a63b7a9ce3a8314f3413da8d62672b911"
+    }
+  },
+  {
+    "package": "fluttertoast",
+    "version": "8.2.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "fb8129cc2c996053180952a78d975b79420b60d757946c36330394865b2cef6a"
+    }
+  },
+  {
+    "package": "frontend_server_client",
+    "version": "4.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f3fedf65adeec4d6ccb2abf053ebc0f07603d402db3d3c5651322b50502e1071"
+    }
+  },
+  {
+    "package": "fuchsia_remote_debug_protocol",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "fwfh_cached_network_image",
+    "version": "0.14.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "fwfh_chewie",
+    "version": "0.14.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "fwfh_just_audio",
+    "version": "0.15.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "fwfh_svg",
+    "version": "0.8.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "fwfh_url_launcher",
+    "version": "0.9.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "fwfh_webview",
+    "version": "0.15.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6479d9e1f089054ec952a263fd603e0e5a24ccd11db9a6c406d479fac7905327"
+    }
+  },
+  {
+    "package": "get",
+    "version": "4.6.6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ec83934ddf3a59ecd89efa679ee527be1e09ea87d02c8e095430405c1784ff80"
+    }
+  },
+  {
+    "package": "get_storage",
+    "version": "2.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ec83934ddf3a59ecd89efa679ee527be1e09ea87d02c8e095430405c1784ff80"
+    }
+  },
+  {
+    "package": "glob",
+    "version": "2.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "graphs",
+    "version": "2.3.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+    }
+  },
+  {
+    "package": "grouped_list",
+    "version": "5.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "695ee985f41d157c9f6974d96a253444bd45e6e97ee2099f81e2d9c5d9fbbfd2"
+    }
+  },
+  {
+    "package": "html",
+    "version": "0.15.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6ed8a26ed0f30589422f86356eed53bb6dacffc3e2fd4feddc944c4331945151",
+      "test/selectors/LICENSE": "184f52218c6188f0f634475678ecfa7767e200ba67101068a3b19db4a8849ece"
+    }
+  },
+  {
+    "package": "http",
+    "version": "1.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "http_client_helper",
+    "version": "3.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c27b74b426221fe9e9488bdaab66fbd464156d1ccb5a44bfd66927fa80e8bc39"
+    }
+  },
+  {
+    "package": "http_multi_server",
+    "version": "3.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "http_parser",
+    "version": "4.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "http_proxy",
+    "version": "1.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "5dbee64e4b37163f7195d338b4341a7d9bfd5db805f54ee33a1bd344275e8a3c"
+    }
+  },
+  {
+    "package": "image",
+    "version": "4.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f3c17da84e0780e1c334325c73098257c32221d62498ed55ef3c1361904925aa"
+    }
+  },
+  {
+    "package": "integral_isolates",
+    "version": "0.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "4a0a578cee7bc9bd5b37c4ad8bc50bffc1932c5eadc3adb08ff718439a897289"
+    }
+  },
+  {
+    "package": "integration_test",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "LICENSE": "a3a9fd82f800a47377f7d3f60c60a5c91cae0495be8f329031e1448ce0f5dab9"
+    }
+  },
+  {
+    "package": "intl",
+    "version": "0.20.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "f1130c1a10b9025c1565d54c311e9eed99f37e6ef52cb3acc3ca6a68d42d8dff",
+      "LICENSE": "7e124af6a556f045cb3a20cafbdaa31602ac2c82cbcb3c3b15faaaf514b06028"
+    }
+  },
+  {
+    "package": "io",
+    "version": "1.0.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "5553d2f48351eeedcba195194d667efa231d5691e09ca7c61cbbf12354bee3b6",
+      "LICENSE": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+    }
+  },
+  {
+    "package": "iregexp",
+    "version": "0.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "12f0ac0c1a778e6a704175d3143265c3a99c4ca02017141c3d48866341e3ded7"
+    }
+  },
+  {
+    "package": "j_downloader",
+    "version": "0.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    }
+  },
+  {
+    "package": "js",
+    "version": "0.6.7",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "a839d6b32a4b36cc66144c7d2ada96b4e1767b5c846cb7365a2c3026cb6a1945",
+      "LICENSE": "efa4eaf6fdec22a36a61395ea70843db9ae815760bf663e068012c92b93c0184"
+    }
+  },
+  {
+    "package": "json_annotation",
+    "version": "4.9.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "143839f62c9b7f88143ea9f688361c27050888acde7696b34e04414bd254fafc"
+    }
+  },
+  {
+    "package": "json_class",
+    "version": "3.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2a0d3fb300a77d2fb206fc4f32d184a851c986fff6816dedc79832c86c3cdc25"
+    }
+  },
+  {
+    "package": "json_path",
+    "version": "0.7.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "37a3a7a6788576033f0afffaab972759c8b5a723b9a8d2fa44a7f39411445f2a"
+    }
+  },
+  {
+    "package": "just_audio",
+    "version": "0.9.43",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "63ce4443e916b27424700d7fe970003add9f54944daf732f2dbcc1d8caf1bbad"
+    }
+  },
+  {
+    "package": "just_audio_platform_interface",
+    "version": "4.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2568490c678ba27cc8a405238637c4ba76adc632232f05dc1c36cbf59381dba4"
+    }
+  },
+  {
+    "package": "just_audio_web",
+    "version": "0.4.13",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2568490c678ba27cc8a405238637c4ba76adc632232f05dc1c36cbf59381dba4"
+    }
+  },
+  {
+    "package": "leak_tracker",
+    "version": "11.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+    }
+  },
+  {
+    "package": "leak_tracker_flutter_testing",
+    "version": "3.0.10",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+    }
+  },
+  {
+    "package": "leak_tracker_testing",
+    "version": "3.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+    }
+  },
+  {
+    "package": "like_button",
+    "version": "2.0.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "737180ae4cd54af134a795471efa36157f59f59440a78b18d4b9f4a4fb2f9136"
+    }
+  },
+  {
+    "package": "lints",
+    "version": "1.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "421fe78c3b5df297f8b4ab2c74f2450a274ee6d245a113091f6b9f90570af193"
+    }
+  },
+  {
+    "package": "loading_animation_widget",
+    "version": "1.2.0+4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "962e7132cd17b9581d39d53958eea39c5caf3fcd4976a925857ae416fd5dbcd3"
+    }
+  },
+  {
+    "package": "local_auth",
+    "version": "2.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "65e95885b7186090d369397ad5382dd9622042338aec0ad9e08ef9472b56d859",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "local_auth_android",
+    "version": "1.0.56",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "65e95885b7186090d369397ad5382dd9622042338aec0ad9e08ef9472b56d859",
+      "LICENSE": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+    }
+  },
+  {
+    "package": "local_auth_darwin",
+    "version": "1.4.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "47ab97dc2733b42afd2fcd8baabc478e3241b25f498977ca051704d7d9ff48e2",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "local_auth_platform_interface",
+    "version": "1.0.10",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "65e95885b7186090d369397ad5382dd9622042338aec0ad9e08ef9472b56d859",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "local_auth_windows",
+    "version": "1.0.11",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "f5ff76034668f88fe5362dc65cfc9aba3f14c13e33917eeae334db12efa5b862",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "logger",
+    "version": "2.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "bea3c025a4d1ec393c6b458d0118374d4faf9a2ebc9d48f642394a32c0b625a0"
+    }
+  },
+  {
+    "package": "logging",
+    "version": "1.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "634da61850d266ef6ee073db837ec2ab10a9e9c1ea5597f6ff2f4ff5420d3948",
+      "LICENSE": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791"
+    }
+  },
+  {
+    "package": "matcher",
+    "version": "0.12.16",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "material_color_utilities",
+    "version": "0.13.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "d103f246ef4c18dab8af0c1dcf6a8af884e5cff554da7261a48ac43c17d98f2e"
+    }
+  },
+  {
+    "package": "maybe_just_nothing",
+    "version": "0.5.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "5be4086b5bab1b85e0aeda9c86d2e6d505e4f93599532ce77303b8a127664036"
+    }
+  },
+  {
+    "package": "meta",
+    "version": "1.18.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a"
+    }
+  },
+  {
+    "package": "mime",
+    "version": "2.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "nested",
+    "version": "1.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "fccaeae95a39c93176de9321c734c90d8e36f465c48fcf278840844d8eab1af4"
+    }
+  },
+  {
+    "package": "node_preamble",
+    "version": "2.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "41997ee02074e3796e539b81b4501ed7d8bc1a620d11ef32cf56494e778461a9"
+    }
+  },
+  {
+    "package": "octo_image",
+    "version": "2.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "9a64f4b486cd12af348a9716640d121dfca9b5ac2d8c3a24a9444b65e8560f9b"
+    }
+  },
+  {
+    "package": "package_config",
+    "version": "2.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+    }
+  },
+  {
+    "package": "package_info_plus",
+    "version": "8.0.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "package_info_plus_platform_interface",
+    "version": "3.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "pasteboard",
+    "version": "0.5.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  },
+  {
+    "package": "path",
+    "version": "1.9.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "path_drawing",
+    "version": "1.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f4fc0fe1e273823b06540b3b948640ff81f3a5c5dc7088972eef662fe450ad77"
+    }
+  },
+  {
+    "package": "path_parsing",
+    "version": "1.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f4fc0fe1e273823b06540b3b948640ff81f3a5c5dc7088972eef662fe450ad77"
+    }
+  },
+  {
+    "package": "path_provider",
+    "version": "2.1.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "path_provider_android",
+    "version": "2.2.15",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "path_provider_foundation",
+    "version": "2.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "path_provider_linux",
+    "version": "2.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "path_provider_platform_interface",
+    "version": "2.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "path_provider_windows",
+    "version": "2.3.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "permission_handler",
+    "version": "11.3.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "f0dbc7f9aa3332c408aa80423eb91d76087bbee70e141b8c1021da6097efc034",
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "permission_handler_android",
+    "version": "12.0.13",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "f0dbc7f9aa3332c408aa80423eb91d76087bbee70e141b8c1021da6097efc034",
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "permission_handler_apple",
+    "version": "9.4.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "9383b1137805b3903af50e9b2e1f2107451b58ece4680408752a7842ec1e3ac2",
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "permission_handler_html",
+    "version": "0.1.3+5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "permission_handler_platform_interface",
+    "version": "4.2.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "permission_handler_windows",
+    "version": "0.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "af0af0e955690a3cc6e1f8f4d43224ae5be6316ff2a3c553c832729e3b334fa7",
+      "LICENSE": "65a603f544989f5cff639d5c55f56e781796e5e1b2f8546a7cb4cb26763133f3"
+    }
+  },
+  {
+    "package": "petitparser",
+    "version": "6.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "8332497896b3560185cd227d89a2d22cb26899e8b9d911d5cb4461ef265a8c8e",
+      "LICENSE": "5fcf06da398e047a219dfbe7f4b39e83720003c971cc8e9ee40d057f979bdd6d"
+    }
+  },
+  {
+    "package": "photo_view",
+    "version": "0.14.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "17b795359e5b64e99988629f0dba0f82cb1d82183afb98f2315949f4d38e75e2"
+    }
+  },
+  {
+    "package": "platform",
+    "version": "3.1.6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "91bcc43f324ec24ce3eede84ec05af1902c704d9b62319790c726a77b7542c65",
+      "LICENSE": "143839f62c9b7f88143ea9f688361c27050888acde7696b34e04414bd254fafc"
+    }
+  },
+  {
+    "package": "plugin_platform_interface",
+    "version": "2.1.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "pointycastle",
+    "version": "3.9.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3a7bb295473da049a1c6edd2f8c41b9e526a4e80f200c0200cc5600b2634df3f"
+    }
+  },
+  {
+    "package": "pool",
+    "version": "1.5.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "process",
+    "version": "5.0.6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "442a51acb67c08a879cf4666bf61968f446f2e64aa5ab60ab542443c88304341",
+      "LICENSE": "5f018bbc25a55406d7a4e1d3229135439e315210b0050ca56dbb367a4934e85d"
+    }
+  },
+  {
+    "package": "provider",
+    "version": "6.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "fccaeae95a39c93176de9321c734c90d8e36f465c48fcf278840844d8eab1af4"
+    }
+  },
+  {
+    "package": "pub_semver",
+    "version": "2.1.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "pubspec_parse",
+    "version": "1.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "479bb84361ed3d6b78f55871c9ae5d6c8f15f49c2089e59fc1d6644d8b0ed32b"
+    }
+  },
+  {
+    "package": "quiver",
+    "version": "3.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "62baafbf4a560e00b0dc33b8693393d24aa9a686c3c1dc12576a8168c15eb379",
+      "LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "NOTICE": "62fc4482b330e1b29a2f095d75202962f1b03e96e88eb766427c638b0f884b5b"
+    }
+  },
+  {
+    "package": "recase",
+    "version": "4.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "389acee6b73f27ef83bdd997f32acc7dc12970c68fbc505284b7bf39d6d80bde"
+    }
+  },
+  {
+    "package": "receive_sharing_intent",
+    "version": "1.8.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b75804f86d9b917a8d3c8c138378e7d079cead2717869d65b22845116d1633b2"
+    }
+  },
+  {
+    "package": "retry",
+    "version": "3.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    }
+  },
+  {
+    "package": "rfc_6901",
+    "version": "0.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "045111cf94811064fcce68634f04ddfdcaf78a74be4e63492f0a12c3ca4a8f88"
+    }
+  },
+  {
+    "package": "rxdart",
+    "version": "0.28.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  },
+  {
+    "package": "saver_gallery",
+    "version": "5.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1460b3eef7521e0d09a3ca68eea4d163dc82d10ab229a318d647852ee8b388bc"
+    }
+  },
+  {
+    "package": "screen_brightness",
+    "version": "0.2.2+1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2b03ffa9338fec15e3ca229054e4cd102ca70cdec351a5ecca3e7e82860af429"
+    }
+  },
+  {
+    "package": "screen_brightness_android",
+    "version": "0.1.0+2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2b03ffa9338fec15e3ca229054e4cd102ca70cdec351a5ecca3e7e82860af429"
+    }
+  },
+  {
+    "package": "screen_brightness_ios",
+    "version": "0.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "cf3f0261a856f13a0a9c5421ae38501d024ed6fb76f441332a59b72e642d84b2"
+    }
+  },
+  {
+    "package": "screen_brightness_macos",
+    "version": "0.1.0+1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2b03ffa9338fec15e3ca229054e4cd102ca70cdec351a5ecca3e7e82860af429"
+    }
+  },
+  {
+    "package": "screen_brightness_platform_interface",
+    "version": "0.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "cf3f0261a856f13a0a9c5421ae38501d024ed6fb76f441332a59b72e642d84b2"
+    }
+  },
+  {
+    "package": "screen_brightness_windows",
+    "version": "0.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "fbe3ea97a5c4961a6ff75c290c67d4c3b9c0c54a00452784cb98253bc7c1390d"
+    }
+  },
+  {
+    "package": "screen_retriever",
+    "version": "0.1.9",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ba4e169ea320a2e6940f6c812aa87cc490580c7de500477256073764cc04baf0"
+    }
+  },
+  {
+    "package": "scrollable_positioned_list",
+    "version": "0.3.8+1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3a5d663bf79ab39c8a6715d7834cc2e16d86dea2a0b1afd74c377de1afc27fe2"
+    }
+  },
+  {
+    "package": "share_plus",
+    "version": "10.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "eb9741a672906ebd01fd9b3bef38f6c82eff250e91149cf404539ee7981079fd"
+    }
+  },
+  {
+    "package": "share_plus_platform_interface",
+    "version": "5.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+    }
+  },
+  {
+    "package": "shelf",
+    "version": "1.4.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "shelf_packages_handler",
+    "version": "3.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a"
+    }
+  },
+  {
+    "package": "shelf_static",
+    "version": "1.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "shelf_web_socket",
+    "version": "1.0.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "simple_animations",
+    "version": "5.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "9cb0c3ec760956518c369e9643c1c6c96e549da67cdfa79918c33641363d941d"
+    }
+  },
+  {
+    "package": "sky_engine",
+    "version": "SDK",
+    "source": "pinned Flutter SDK",
+    "licenseFiles": {
+      "authors": "63f751e1f4c4e4027c21bee1ef3ec7ddfc0e2c040d25a33c6ba727972d611fd3",
+      "license": "82a5f93f918f99ff82af18c8be176c709dc812cb3f5e1e1cd93847bdeb0f9369"
+    }
+  },
+  {
+    "package": "source_gen",
+    "version": "1.5.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "source_map_stack_trace",
+    "version": "2.1.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "source_maps",
+    "version": "0.10.13",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "source_span",
+    "version": "1.10.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "sprintf",
+    "version": "7.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "66fd4ca8e37cfc8cafef292f434a26af6a56e7851c922d7f0ccc26ad60a2e8c2"
+    }
+  },
+  {
+    "package": "sqflite",
+    "version": "2.4.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+    }
+  },
+  {
+    "package": "sqflite_android",
+    "version": "2.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+    }
+  },
+  {
+    "package": "sqflite_common",
+    "version": "2.5.4+6",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+    }
+  },
+  {
+    "package": "sqflite_darwin",
+    "version": "2.4.1+1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+    }
+  },
+  {
+    "package": "sqflite_platform_interface",
+    "version": "2.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+    }
+  },
+  {
+    "package": "sqlite3",
+    "version": "2.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "example/custom_extension/LICENSE": "422e0de8e3275febf5c41a5ccf891f68f16bc40e1b5dca26e50913b307ef794e",
+      "LICENSE": "67e5d73a3a0c6e41f33d688a672b1161bf7f16e04da9ae48a7a14f1ba7436a4d"
+    }
+  },
+  {
+    "package": "sqlite3_flutter_libs",
+    "version": "0.5.32",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "67e5d73a3a0c6e41f33d688a672b1161bf7f16e04da9ae48a7a14f1ba7436a4d"
+    }
+  },
+  {
+    "package": "sqlparser",
+    "version": "0.39.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "bec8c7a58f3e043a40123d332260048aeff40ebdcaf33bf8d497a3fea84b8f84"
+    }
+  },
+  {
+    "package": "stack_trace",
+    "version": "1.12.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+    }
+  },
+  {
+    "package": "stream_channel",
+    "version": "2.1.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "stream_transform",
+    "version": "2.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+    }
+  },
+  {
+    "package": "string_scanner",
+    "version": "1.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "sync_http",
+    "version": "0.3.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b9b748d4dd6f725387bf69e96df4e4ebff167ae83547954242a731504d037644"
+    }
+  },
+  {
+    "package": "synchronized",
+    "version": "3.3.0+3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6d07c6bb60afb906049d507e19fcc4c6b59e35c0dd0f8a7302e87b3fb0576900"
+    }
+  },
+  {
+    "package": "system_network_proxy",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "97a9d88291b46bf44275adaf6339dc2f0ae158a99bcba857885d583fa613f969"
+    }
+  },
+  {
+    "package": "system_network_proxy_linux",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "97a9d88291b46bf44275adaf6339dc2f0ae158a99bcba857885d583fa613f969"
+    }
+  },
+  {
+    "package": "system_network_proxy_macos",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "97a9d88291b46bf44275adaf6339dc2f0ae158a99bcba857885d583fa613f969"
+    }
+  },
+  {
+    "package": "system_network_proxy_platform_interface",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6144cc5201c219abf6038c2c3d87e8a207e51f12050023094e511ffb74d52c21"
+    }
+  },
+  {
+    "package": "system_network_proxy_web",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "6144cc5201c219abf6038c2c3d87e8a207e51f12050023094e511ffb74d52c21"
+    }
+  },
+  {
+    "package": "system_network_proxy_windows",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "97a9d88291b46bf44275adaf6339dc2f0ae158a99bcba857885d583fa613f969"
+    }
+  },
+  {
+    "package": "telegram",
+    "version": "0.0.9",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "e43325c8857b411afb89ce8f98465fca785205dd0a0ed4a07c263ba967766cba"
+    }
+  },
+  {
+    "package": "template_expressions",
+    "version": "3.3.1+2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "50564117e06bf6a3ba4b84d94b1ccb96aa32cc0e6fb271fc2d1602b4b831a94f"
+    }
+  },
+  {
+    "package": "term_glyph",
+    "version": "1.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+    }
+  },
+  {
+    "package": "test",
+    "version": "1.25.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "test_api",
+    "version": "0.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+    }
+  },
+  {
+    "package": "test_core",
+    "version": "0.6.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+    }
+  },
+  {
+    "package": "throttling",
+    "version": "1.0.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "711883f70b96a09e6e0429aeb8b85c628a88bf9a164741d4415c17f1904f0c51"
+    }
+  },
+  {
+    "package": "timing",
+    "version": "1.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+    }
+  },
+  {
+    "package": "typed_data",
+    "version": "1.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "85337aeeee55c79d4a1da86d1393354c14e4a5f0daf402de66ffe974c51694bf",
+      "LICENSE": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+    }
+  },
+  {
+    "package": "upower",
+    "version": "0.7.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    }
+  },
+  {
+    "package": "url_launcher",
+    "version": "6.3.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_android",
+    "version": "6.3.14",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_ios",
+    "version": "6.3.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_linux",
+    "version": "3.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_macos",
+    "version": "3.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_platform_interface",
+    "version": "2.3.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "url_launcher_web",
+    "version": "2.3.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "d0236a600d4e4f345630699f1da6a5c8084e85eabca0093b71be5411a2d9c54c",
+      "LICENSE": "f9bd6d4f1da93f33d7d9aa44848bee6d1bacf1c5049d3ba2fd3f5d362a01ceab"
+    }
+  },
+  {
+    "package": "url_launcher_windows",
+    "version": "3.1.4",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e89602d9d136178bcf1e20cbdfe98c236050f7fefcd8e9a03a18fbc4aa771af4",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "uuid",
+    "version": "4.5.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ad3e5523e51004e94ba9ce728805b1b4242dbccdb65e62b523800e35a8a7cfdc"
+    }
+  },
+  {
+    "package": "vector_graphics",
+    "version": "1.1.15",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "695ff5aa8ddb46be748426859d8b77603bd4c31b94a4284cb60067d8ffaf8098",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "vector_graphics_codec",
+    "version": "1.1.13",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "695ff5aa8ddb46be748426859d8b77603bd4c31b94a4284cb60067d8ffaf8098",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "vector_graphics_compiler",
+    "version": "1.1.16",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "695ff5aa8ddb46be748426859d8b77603bd4c31b94a4284cb60067d8ffaf8098",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "vector_math",
+    "version": "2.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "56fd7364e2b7eecf93324fadfc7af758e094b50dd8d4d452e73447fa59dfec69",
+      "LICENSE": "b5d856a1e27e9ebea4957fc3526f1c65782a04894b113c6b3b0fb1321dbdec55"
+    }
+  },
+  {
+    "package": "video_player",
+    "version": "2.9.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "e166ea6f02885adcc88d4785d197217989a3fa7ff4655cd5e6de24f899592d96",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "video_player_android",
+    "version": "2.7.16",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "90d5300d3b74f2adbee390cdccd52517246e185a79c5da00c00a5e64d0f739e5",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "video_player_avfoundation",
+    "version": "2.6.7",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "44e9cf62e93fd51a59b9ad5f92b6769bfe161b5e20f42f31c4a859812cf46eb7",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "video_player_platform_interface",
+    "version": "6.2.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "44e9cf62e93fd51a59b9ad5f92b6769bfe161b5e20f42f31c4a859812cf46eb7",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "video_player_web",
+    "version": "2.3.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "44e9cf62e93fd51a59b9ad5f92b6769bfe161b5e20f42f31c4a859812cf46eb7",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "visibility_detector",
+    "version": "0.4.0+2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "d347790d98693ff63129eafe676bac5cb5247c972f1a36f631bfa0e4dbb17293"
+    }
+  },
+  {
+    "package": "vm_service",
+    "version": "14.2.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+    }
+  },
+  {
+    "package": "volume_button_override",
+    "version": "0.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "f1ef2c5581bbdfaeb9be04a525d83cb5ff7bf6db82df70d36c7094359e134f95"
+    }
+  },
+  {
+    "package": "wakelock_plus",
+    "version": "1.2.8",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ebff92b2e4105e903605f70bac0030c20b7a1d9d43fd73f8b8aed08ab070fcb9"
+    }
+  },
+  {
+    "package": "wakelock_plus_platform_interface",
+    "version": "1.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "1a95201dd1f509289fbbf929f72be2a25fd73c799697e30f5e7782a9cabf5102"
+    }
+  },
+  {
+    "package": "watcher",
+    "version": "1.1.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+    }
+  },
+  {
+    "package": "waterfall_flow",
+    "version": "3.0.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "b6c05126910f5644f7d94b9420c8820735ce0a5d55ca2e40351fad82aa6965d0"
+    }
+  },
+  {
+    "package": "web",
+    "version": "1.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "aa913ff50d7542eb8cc35b9f48a80928ac6819ba9057f85d424655e3e8dc271c"
+    }
+  },
+  {
+    "package": "web_socket_channel",
+    "version": "2.4.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "a4b5d7d31626e90b77e8696f1c47643aa31f52e17c1907c1ab60b068110e6e10"
+    }
+  },
+  {
+    "package": "webdriver",
+    "version": "3.2.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "1eaea9b72e821cb47eb547b3fc73a6bc7abc0be3801b2422873910e9abefd56e",
+      "LICENSE": "74cb46b123c9fa918ea8e0a0f5be736a1cd661edf145ccc723dc7ce30324ebab"
+    }
+  },
+  {
+    "package": "webkit_inspection_protocol",
+    "version": "1.2.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "a034318f543da5f7b704c60876bdfe5954d4569625a15e31adeaba69bb2542ce",
+      "LICENSE": "eb9a6b9672316612439514f10b5d3b24bcd140313c96a73c370bb7b07897a8cd"
+    }
+  },
+  {
+    "package": "webview_flutter",
+    "version": "4.2.2",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "9795b9cbf89001f0e6585f9429bcc82f12b87940b2abc0b4e67622ed33f8d3dc",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "webview_flutter_android",
+    "version": "3.16.9",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "d27484f6b6872c06fff6a68833459bcb1304643c1cfd51191f1d53947a80eaf2",
+      "LICENSE": "f04955f34f0906f51d5a7665a90f9c02489e321fcf8b040f3146f6d99119c0fb"
+    }
+  },
+  {
+    "package": "webview_flutter_platform_interface",
+    "version": "2.10.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "63aac87dc1c3b2286a8cf0b7dd52e0ee1f869ba4a14d06af80a54dd0e2f52793",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "webview_flutter_wkwebview",
+    "version": "3.17.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "d62e4a917cafec9dc86f533ccae6cfafcf63291a04ea98ddaa904d414941a91e",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "win32",
+    "version": "5.10.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "87ef8bccdd619f2345ba5b9026cf1d6cccb305e36ab83849a8a3af9293abde7e"
+    }
+  },
+  {
+    "package": "win32_registry",
+    "version": "1.1.5",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "cba84bab7786adf26f0d51ebf830bff21b9ec9214db839372f4b81df579c054b",
+      "LICENSE": "8564d1c5caab56132f0e6bc39cea532c723956e8c389d9be867388ee0b2fcb06"
+    }
+  },
+  {
+    "package": "window_manager",
+    "version": "0.3.9",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "ba4e169ea320a2e6940f6c812aa87cc490580c7de500477256073764cc04baf0"
+    }
+  },
+  {
+    "package": "xdg_directories",
+    "version": "1.1.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "695ff5aa8ddb46be748426859d8b77603bd4c31b94a4284cb60067d8ffaf8098",
+      "LICENSE": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+    }
+  },
+  {
+    "package": "xml",
+    "version": "6.5.0",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "AUTHORS": "3fac2716d7c32fb440a5b70d63373eaed7e320717a6a1e42d964109713056c96",
+      "LICENSE": "5fcf06da398e047a219dfbe7f4b39e83720003c971cc8e9ee40d057f979bdd6d"
+    }
+  },
+  {
+    "package": "yaml",
+    "version": "3.1.3",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "d47b93335401b052d79a2f5a3710e4cf7b5aed782faedf84d40fbdd6eb934ec7"
+    }
+  },
+  {
+    "package": "yaon",
+    "version": "1.1.4+10",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "2a0d3fb300a77d2fb206fc4f32d184a851c986fff6816dedc79832c86c3cdc25"
+    }
+  },
+  {
+    "package": "zoom_view",
+    "version": "0.0.15",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "992eb3e2a1f2819dd2e71efaad292fbe21a06a9c3dcd5928c050d93cd8aaac37"
+    }
+  },
+  {
+    "package": "zoom_widget",
+    "version": "2.0.1",
+    "source": "pubspec.lock",
+    "licenseFiles": {
+      "LICENSE": "d33c7efb08bf901954ac1c75b4ba9029f7e4d637356fa52a897d9c4d77cb60dd"
+    }
+  }
+]

@@ -1,0 +1,48 @@
+JHenTai Bilingual Lite - unofficial derivative
+
+This combined derivative is distributed under GPL-3.0-only (see LICENSE).
+This does not revoke the original licenses on upstream components.
+
+JHenTai
+Copyright (C) 2022 and later top.jtmonster / jiangtian616 and contributors.
+Upstream: https://github.com/jiangtian616/JHenTai
+Base: v8.0.16+334, commit 1e23251d5efd4d93b0cacfe0f08b5a25fa3c7e31.
+Licensed under Apache License 2.0; the original license is preserved in
+LICENSES/Apache-2.0.txt. Original source notices and acknowledgements remain.
+
+Bilingual Lite
+Copyright (C) 2026 Bilingual Lite contributors.
+Source: https://github.com/cyreneEGO093/bilingual-lite
+Base: v0.6.0, commit 6ddf10bd8e9cc49b204c9eb51b915b1c0024d102.
+Licensed under GPL-3.0-only. The API contracts, bounded request policies,
+custom prompts, terminology configuration, image preprocessing and overlay
+interaction have been adapted to Dart/Flutter, not embedded as WebExtension
+JavaScript in a WebView.
+
+Derivative changes (2026-10-07 to 2026-10-08), Bilingual Lite contributors:
+- Shared viewport reader toolbar, explicit cancellable whole-work image translation,
+  continuous normalized move/resize controls, and bounded comment preview actions.
+- New lib/src/translation module and offline tests.
+- Reader image overlays, title/comment bilingual translation and BYOK settings.
+- Separate Android application identity and Windows product/data identity.
+- API credentials in OS secure storage, excluded from normal configuration.
+- Syncfusion charts removed; native_visit_chart.dart uses Flutter Canvas.
+- Pinput/SmartAuth removed; local PIN entry uses Flutter TextField, avoiding
+  the unused proprietary Google Play Services SMS/autofill dependencies.
+- Fork branding, license display and documentation; upstream update checks
+  removed entirely because upstream packages lack these modifications.
+- Build/reproducibility and dependency license records.
+- Serialize first-start log-directory creation before opening log files.
+- Reader editing controls own their gestures without disabling normal image
+  pan/zoom outside the controls.
+
+The project has no affiliation with API providers or the JHenTai upstream
+maintainers. It is an experimental personal project, whose derivative development and modifications were entirely produced by
+GPT-6 Astra through vibe coding, without any warranty or promise of future
+maintenance. This statement does not claim authorship of upstream or
+third-party code; their authorship and licenses are preserved.
+See the GPL-3.0-only warranty disclaimer in LICENSE.
+
+Third-party packages retain their own copyright notices and licenses.
+Copies are under LICENSES/third-party; Flutter also generates the in-app
+third-party license registry. Versions and Git revisions are in pubspec.lock.
