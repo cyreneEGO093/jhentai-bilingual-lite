@@ -28,6 +28,7 @@ class ReaderTranslationController extends ChangeNotifier {
   final TranslationSettings Function() settings;
   final Future<void> Function() ensureSettings;
   final Map<int, ReaderTranslationPage> _pages = {};
+  final Map<int, int> _revisions = {};
   final Map<int, ReaderImageSurface> _surfaces = {};
   final bool _listenSettings;
   int activeIndex;
@@ -38,6 +39,7 @@ class ReaderTranslationController extends ChangeNotifier {
   bool batching = false;
   int completed = 0;
   int failed = 0;
+  int skipped = 0;
   String? status;
   CancelToken? _token;
   bool _disposed = false;
@@ -142,6 +144,17 @@ class ReaderTranslationController extends ChangeNotifier {
     changed();
   }
 
+  /// Invalidate this page in the current run without stopping other pages.
+  void discardCurrent() {
+    _revisions[activeIndex] = (_revisions[activeIndex] ?? 0) + 1;
+    _pages.remove(activeIndex);
+    selectedBubble = null;
+    editing = false;
+    selecting = false;
+    status = '已清空当前图片的译文和框位；再次翻译将重新请求 API。';
+    changed();
+  }
+
   void deleteSelected() {
     final index = selectedBubble;
     if (index == null || index >= current.bubbles.length) {
@@ -179,6 +192,9 @@ class ReaderTranslationController extends ChangeNotifier {
     busy = true;
     _cancelRequested = false;
     final requestedIndex = activeIndex;
+    final revisions = Map<int, int>.of(_revisions);
+    bool valid(int index) =>
+        (_revisions[index] ?? 0) == (revisions[index] ?? 0);
     changed();
     CancelToken? token;
     try {
@@ -194,11 +210,16 @@ class ReaderTranslationController extends ChangeNotifier {
       selecting = false;
       completed = 0;
       failed = 0;
+      skipped = 0;
       final targets =
           all ? List.generate(pageCount, (i) => i) : [requestedIndex];
       for (final index in targets) {
         if (token.isCancelled || _disposed) {
           break;
+        }
+        if (!valid(index)) {
+          skipped++;
+          continue;
         }
         if (all && page(index).translated) {
           completed++;
@@ -219,10 +240,18 @@ class ReaderTranslationController extends ChangeNotifier {
           if (token.isCancelled) {
             throw token.cancelError!;
           }
+          if (!valid(index)) {
+            skipped++;
+            continue;
+          }
           final result = await client.image(prepared.dataUrl, config,
               crop: crop, cancelToken: token);
           if (token.isCancelled || _disposed) {
             break;
+          }
+          if (!valid(index)) {
+            skipped++;
+            continue;
           }
           final state = page(index);
           state.bubbles = crop == null ? result : [...state.bubbles, ...result];
@@ -241,6 +270,10 @@ class ReaderTranslationController extends ChangeNotifier {
           if (token.isCancelled || _disposed) {
             break;
           }
+          if (!valid(index)) {
+            skipped++;
+            continue;
+          }
           failed++;
           status = translationError(error);
           if (!all ||
@@ -253,8 +286,11 @@ class ReaderTranslationController extends ChangeNotifier {
         }
         changed();
       }
-      if (all && !token.isCancelled && completed + failed == pageCount) {
-        status = '整页翻译完成：成功 $completed 张，失败 $failed 张。再次点击可重试失败图片。';
+      if (all &&
+          !token.isCancelled &&
+          completed + failed + skipped == pageCount) {
+        status =
+            '整页翻译完成：成功 $completed 张，失败 $failed 张，跳过 $skipped 张。再次点击可翻译未完成图片。';
       }
     } catch (error) {
       if (!_disposed && token?.isCancelled != true) {

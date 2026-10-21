@@ -32,6 +32,7 @@ import '../../../setting/user_setting.dart';
 import '../../../service/log.dart';
 import '../../../utils/route_util.dart';
 import '../../../translation/translation_widgets.dart';
+import '../../../translation/selection_translation.dart';
 
 const double imageMinHeight = 100;
 
@@ -193,14 +194,9 @@ class _EHCommentTextBody extends StatelessWidget {
     );
 
     if (!inDetailPage) {
-      widget = SelectionArea(
+      widget = TranslationSelectionArea(
         child: widget,
-        contextMenuBuilder: (BuildContext context, SelectableRegionState selectableRegionState) {
-          AdaptiveTextSelectionToolbar toolbar = AdaptiveTextSelectionToolbar.selectableRegion(
-            selectableRegionState: selectableRegionState,
-          );
-
-          toolbar.buttonItems?.add(
+        extraItems: [
             ContextMenuButtonItem(
               label: 'blockUser'.tr,
               onPressed: () {
@@ -208,10 +204,7 @@ class _EHCommentTextBody extends StatelessWidget {
                 onBlockUser?.call();
               },
             ),
-          );
-
-          return toolbar;
-        },
+        ],
       );
     }
 

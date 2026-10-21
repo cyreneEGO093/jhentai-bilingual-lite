@@ -8,6 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:jhentai/src/translation/translation_client.dart';
 import 'package:jhentai/src/translation/translation_models.dart';
 import 'package:jhentai/src/translation/translation_settings.dart';
+import 'package:jhentai/src/translation/translation_quality.dart';
 
 class FakeAdapter implements HttpClientAdapter {
   final Future<ResponseBody> Function(RequestOptions) handler;
@@ -51,6 +52,42 @@ TranslationClient client(
 const configured = TranslationSettings(apiKey: 'test-placeholder');
 
 void main() {
+  test(
+      'copied prose fails once even with custom prompt; names and Chinese remain valid',
+      () async {
+    const source = 'これはとてもおもしろいお話です。';
+    var calls = 0;
+    final api = client((_) async {
+      calls++;
+      return completion({
+        'translations': [
+          {'id': 0, 'translated': source}
+        ]
+      });
+    });
+    await expectLater(
+        api.text(
+            source,
+            const TranslationSettings(
+                apiKey: 'offline-placeholder', textPrompt: 'Custom')),
+        throwsA(isA<TranslationFailure>()
+            .having((e) => e.message, 'message', contains('照抄'))));
+    expect(calls, 1);
+    api.dispose();
+    expect(
+        copiedForeignProse(
+            '이 이야기는 정말 재미있는 이야기입니다.', '이 이야기는 정말 재미있는 이야기입니다.', 'zh-CN'),
+        isTrue);
+    expect(copiedForeignProse(source, source, 'Japanese'), isFalse);
+    for (final unchanged in [
+      '这是一个中文句子。',
+      'サクラ',
+      '@あいうえおかきくけこ!',
+      'https://example.test/あいうえおかきくけこ!'
+    ]) {
+      expect(copiedForeignProse(unchanged, unchanged, '简体中文'), isFalse);
+    }
+  });
   test(
       'OpenRouter text uses bounded output, disables reasoning and preserves IDs',
       () async {

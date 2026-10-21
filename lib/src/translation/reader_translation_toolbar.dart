@@ -323,6 +323,10 @@ class _ReaderTranslationToolbarState extends State<ReaderTranslationToolbar> {
                                                                   ? '原图'
                                                                   : '译文',
                                                               c.toggleVisible),
+                                                          _button('清空译文',
+                                                              c.discardCurrent,
+                                                              key:
+                                                                  'discard-image-translation'),
                                                           _button(
                                                               c.editing
                                                                   ? '完成调整'

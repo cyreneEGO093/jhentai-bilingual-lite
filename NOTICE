@@ -14,12 +14,17 @@ Bilingual Lite
 Copyright (C) 2026 Bilingual Lite contributors.
 Source: https://github.com/cyreneEGO093/bilingual-lite
 Base: v0.6.0, commit 6ddf10bd8e9cc49b204c9eb51b915b1c0024d102.
+Updates adapted through v0.6.2, commit 287e866d9f6afd0b9b41df3cd9bcbbc2f3b16da8,
+including v0.6.1 selected-text translation and v0.6.2 result invalidation
+and conservative copied-prose checks. Browser-specific popup/DOM fixes excluded.
 Licensed under GPL-3.0-only. The API contracts, bounded request policies,
 custom prompts, terminology configuration, image preprocessing and overlay
 interaction have been adapted to Dart/Flutter, not embedded as WebExtension
 JavaScript in a WebView.
 
-Derivative changes (2026-10-07 to 2026-10-08), Bilingual Lite contributors:
+Derivative changes (2026-10-07 to 2026-10-21), Bilingual Lite contributors:
+- Selected-text translation with bounded chunks and partial retry, current-image
+  result clearing with stale-response protection, and copied-prose detection.
 - Shared viewport reader toolbar, explicit cancellable whole-work image translation,
   continuous normalized move/resize controls, and bounded comment preview actions.
 - Edit-only mobile/desktop move and resize corner icons, edge-safe hit targets,

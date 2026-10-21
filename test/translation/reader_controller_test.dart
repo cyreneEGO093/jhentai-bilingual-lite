@@ -33,6 +33,79 @@ class FakeVision extends TranslationClient {
 
 void main() {
   testWidgets(
+      'discard removes crops and edited bounds, ignores active result, skips queued page and preserves other pages',
+      (tester) async {
+    await tester.runAsync(() async {
+      final recorder = ui.PictureRecorder();
+      Canvas(recorder);
+      final picture = recorder.endRecording();
+      final image = await picture.toImage(30, 40);
+      picture.dispose();
+      final api = FakeVision();
+      final c = ReaderTranslationController(
+          pageCount: 4,
+          loadImage: (_, __) async => image.clone(),
+          client: api,
+          settings: () =>
+              const TranslationSettings(apiKey: 'offline-placeholder'),
+          ensureSettings: () async {});
+      await c.translate();
+      await c.translate(crop: const Rect.fromLTWH(.2, .2, .1, .1));
+      c.changeBounds(0, 0, const Rect.fromLTWH(.5, .5, .2, .2));
+      c.selectedBubble = 0;
+      c.editing = true;
+      c.discardCurrent();
+      c.resetBounds();
+      expect(c.current.bubbles, isEmpty);
+      expect(c.current.original, isEmpty);
+      expect(c.current.translated, isFalse);
+      expect(c.selectedBubble, isNull);
+      expect(c.editing, isFalse);
+      final before = api.calls;
+      api.onCall = () {
+        if (api.calls == before + 2) {
+          c.activate(1);
+          c.discardCurrent();
+          c.activate(2);
+          c.discardCurrent();
+        }
+      };
+      await c.translate(all: true);
+      expect(api.calls, before + 3);
+      expect(c.page(0).translated, isTrue);
+      expect(c.page(1).bubbles, isEmpty);
+      expect(c.page(2).bubbles, isEmpty);
+      expect(c.page(3).translated, isTrue);
+      expect(c.completed, 2);
+      expect(c.failed, 0);
+      expect(c.skipped, 2);
+      api.onCall = null;
+      await c.translate(all: true);
+      expect(api.calls, before + 5);
+      expect(c.completed, 4);
+      c.dispose();
+      api.dispose();
+      image.dispose();
+    });
+  });
+
+  test('discard during initialization skips only invalidated page', () async {
+    final gate = Completer<void>();
+    final c = ReaderTranslationController(
+        pageCount: 1,
+        loadImage: (_, __) async => throw StateError('Must not load'),
+        settings: () =>
+            const TranslationSettings(apiKey: 'offline-placeholder'),
+        ensureSettings: () => gate.future);
+    final run = c.translate(all: true);
+    c.discardCurrent();
+    gate.complete();
+    await run;
+    expect(c.skipped, 1);
+    expect(c.current.translated, isFalse);
+    c.dispose();
+  });
+  testWidgets(
       'whole work loads unmounted pages, isolates failure, retries only missing',
       (tester) async {
     await tester.runAsync(() async {

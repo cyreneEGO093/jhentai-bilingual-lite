@@ -28,6 +28,7 @@ import 'package:extended_image/extended_image.dart';
 import 'package:jhentai/src/translation/translation_store.dart';
 import 'package:jhentai/src/translation/translation_settings_page.dart';
 import 'package:jhentai/src/translation/translation_widgets.dart';
+import 'package:jhentai/src/translation/selection_translation.dart';
 
 Future<void> waitFor(WidgetTester tester, Finder finder) async {
   for (var i = 0; i < 120; i++) {
@@ -285,6 +286,31 @@ void main() {
       capture.dispose();
       // Printed path contains no user content; the fixture is generated above.
       debugPrint('TRANSLATION_SMOKE_SCREENSHOT=$output');
+      final beforeClear = requests.length;
+      await tester
+          .ensureVisible(find.byKey(const Key('discard-image-translation')));
+      await tester.tap(find.byKey(const Key('discard-image-translation')));
+      await tester.pump();
+      expect(session.current.bubbles, isEmpty);
+      expect(session.current.original, isEmpty);
+      expect(find.byKey(const Key('translation-bubble-0')), findsNothing);
+      expect(requests.length, beforeClear);
+      expect(session.page(1).translated, isTrue);
+      await tester.ensureVisible(find.byKey(const Key('translate-image')));
+      await tester.tap(find.byKey(const Key('translate-image')));
+      await waitFor(tester, find.text('整图测试成功'));
+      expect(requests.length, beforeClear + 1);
+      final action = selectionTranslationItem(
+          tester.element(find.byType(Scaffold)), 'Selected synthetic text.');
+      action.onPressed!();
+      await waitFor(tester, find.byKey(const Key('selection-translated-text')));
+      expect(requests.length, beforeClear + 2);
+      expect(
+          (jsonDecode(requests.last['messages'][1]['content']) as List)
+              .single['text'],
+          'Selected synthetic text.');
+      await tester.tap(find.byKey(const Key('close-selection-translation')));
+      await tester.pump(const Duration(milliseconds: 300));
       await tester.pumpWidget(const SizedBox());
       zoom.dispose();
       session.dispose();

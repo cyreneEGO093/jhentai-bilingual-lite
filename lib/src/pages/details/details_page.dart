@@ -2,6 +2,7 @@
 import 'package:flutter/rendering.dart';
 import 'dart:math';
 import '../../translation/translation_widgets.dart';
+import '../../translation/selection_translation.dart';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
@@ -325,7 +326,7 @@ class DetailsPage extends StatelessWidget with Scroll2TopPageMixin {
               anchors: editableTextState.contextMenuAnchors,
             );
 
-            _appendTitleContextMenuItems(toolbar, editableTextState);
+            _appendTitleContextMenuItems(context, toolbar, editableTextState);
 
             return toolbar;
           },
@@ -378,7 +379,7 @@ class DetailsPage extends StatelessWidget with Scroll2TopPageMixin {
                     anchors: editableTextState.contextMenuAnchors,
                   );
 
-                  _appendTitleContextMenuItems(toolbar, editableTextState);
+                  _appendTitleContextMenuItems(context, toolbar, editableTextState);
 
                   return toolbar;
                 },
@@ -391,6 +392,7 @@ class DetailsPage extends StatelessWidget with Scroll2TopPageMixin {
   }
 
   void _appendTitleContextMenuItems(
+    BuildContext context,
     AdaptiveTextSelectionToolbar toolbar,
     EditableTextState editableTextState,
   ) {
@@ -400,6 +402,9 @@ class DetailsPage extends StatelessWidget with Scroll2TopPageMixin {
     }
 
     String rawSelectedText = editingValue.selection.textInside(editingValue.text);
+    if (rawSelectedText.trim().isNotEmpty) {
+      toolbar.buttonItems?.add(selectionTranslationItem(context, rawSelectedText));
+    }
     toolbar.buttonItems?.add(
       ContextMenuButtonItem(
         label: 'search'.tr,
