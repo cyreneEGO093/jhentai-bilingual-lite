@@ -18,6 +18,7 @@ root = Path(__file__).resolve().parent.parent
 parser = argparse.ArgumentParser()
 parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--android-apk', type=Path, required=True)
+parser.add_argument('--android-only', action='store_true', help='Package an Android-only experimental release; do not reuse a stale Windows binary.')
 args = parser.parse_args()
 output = args.output.resolve()
 if output == root or output.is_relative_to(root):
@@ -27,8 +28,8 @@ version = re.search(r'^version:\s*(\S+)', (root / 'pubspec.yaml').read_text(), r
 stem = f'jhentai-bilingual-lite-{version.replace("+", "-")}'
 windows = root / 'build/windows/x64/runner/Release'
 apk = args.android_apk.resolve()
-if not (windows / 'jhentai_bilingual.exe').is_file() or not apk.is_file():
-    raise SystemExit('Both native release builds must exist before packaging.')
+if not apk.is_file() or (not args.android_only and not (windows / 'jhentai_bilingual.exe').is_file()):
+    raise SystemExit('Requested native release builds must exist before packaging.')
 
 def write_zip(target, files):
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
@@ -48,8 +49,9 @@ def current_notice(name):
 
 notices = [(root / name, name) for name in docs]
 notices += [(p, p.relative_to(root).as_posix()) for p in (root / 'LICENSES').rglob('*') if p.is_file() and current_notice(p.relative_to(root))]
-binary_files = [(p, p.relative_to(windows).as_posix()) for p in windows.rglob('*') if p.is_file() and p.suffix != '.pdb']
-write_zip(output / f'{stem}-windows-x64.zip', binary_files + notices)
+if not args.android_only:
+    binary_files = [(p, p.relative_to(windows).as_posix()) for p in windows.rglob('*') if p.is_file() and p.suffix != '.pdb']
+    write_zip(output / f'{stem}-windows-x64.zip', binary_files + notices)
 shutil.copyfile(apk, output / f'{stem}-android-arm64.apk')
 write_zip(output / f'{stem}-notices.zip', notices)
 

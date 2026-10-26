@@ -9,6 +9,7 @@ import 'translation_models.dart';
 import 'translation_settings.dart';
 import 'translation_store.dart';
 import 'translation_widgets.dart';
+import 'local_ocr.dart';
 
 typedef ReaderImageLoader = Future<ui.Image> Function(
     int index, CancelToken token);
@@ -204,6 +205,13 @@ class ReaderTranslationController extends ChangeNotifier {
       }
       final config = settings();
       config.validate(requireKey: true);
+      if (config.imageBackend == 'localOcr' &&
+          (!localOcr.supported || (await localOcr.status())['ready'] != true)) {
+        throw const TranslationFailure('请在 Android 翻译设置中先下载本地 OCR 模型。');
+      }
+      if (_disposed || _cancelRequested) {
+        return;
+      }
       token = CancelToken();
       _token = token;
       batching = all;
@@ -234,18 +242,41 @@ class ReaderTranslationController extends ChangeNotifier {
           if (token.isCancelled) {
             throw token.cancelError!;
           }
-          final prepared = await prepareTranslationImage(pixels, crop: crop);
-          pixels.dispose();
-          pixels = null;
-          if (token.isCancelled) {
-            throw token.cancelError!;
+          List<TranslationBubble> result;
+          if (config.imageBackend == 'localOcr') {
+            final lines = await localOcr.recognize(pixels, token, crop: crop,
+                progress: (message) {
+              if (!token!.isCancelled && !_disposed) {
+                status = message;
+                changed();
+              }
+            });
+            if (token.isCancelled) {
+              throw token.cancelError!;
+            }
+            if (!valid(index)) {
+              skipped++;
+              continue;
+            }
+            pixels.dispose();
+            pixels = null;
+            status = '正在翻译识别出的文字（图片不上传）';
+            changed();
+            result = await client.ocrText(lines, config, cancelToken: token);
+          } else {
+            final prepared = await prepareTranslationImage(pixels, crop: crop);
+            pixels.dispose();
+            pixels = null;
+            if (token.isCancelled) {
+              throw token.cancelError!;
+            }
+            if (!valid(index)) {
+              skipped++;
+              continue;
+            }
+            result = await client.image(prepared.dataUrl, config,
+                crop: crop, cancelToken: token);
           }
-          if (!valid(index)) {
-            skipped++;
-            continue;
-          }
-          final result = await client.image(prepared.dataUrl, config,
-              crop: crop, cancelToken: token);
           if (token.isCancelled || _disposed) {
             break;
           }

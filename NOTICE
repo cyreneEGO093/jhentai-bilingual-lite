@@ -22,7 +22,12 @@ custom prompts, terminology configuration, image preprocessing and overlay
 interaction have been adapted to Dart/Flutter, not embedded as WebExtension
 JavaScript in a WebView.
 
-Derivative changes (2026-10-07 to 2026-10-21), Bilingual Lite contributors:
+Derivative changes (2026-10-07 to 2026-10-26), Bilingual Lite contributors:
+- Optional Android local OCR using ONNX Runtime 1.30.0, OpenCV 4.12.0,
+  and on-demand PP-OCRv6 small models from RapidAI/RapidOCR v3.9.2.
+  Native preprocessing/CTC pipeline is independently implemented using
+  documented model conventions; no Python/Qt manga translation application
+  is embedded. Provenance and preserved notices: LICENSES/local-ocr/.
 - Selected-text translation with bounded chunks and partial retry, current-image
   result clearing with stale-response protection, and copied-prose detection.
 - Shared viewport reader toolbar, explicit cancellable whole-work image translation,

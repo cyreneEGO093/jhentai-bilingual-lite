@@ -1,9 +1,14 @@
-# Distribution review — 8.0.16-bilingual.5+339
+# Distribution review — 8.0.16-bilingual.6-ocr.1+340
 
 The combined derivative is released under **GPL-3.0-only**. This review covers
-the locked source and Windows x64 / Android arm64 release, not future updates.
-The .5 translation update introduces no new dependencies; the dependency lock and notices
-remain unchanged from the .3 review.
+the locked source and Android arm64 experimental release, not future updates.
+No new Windows binary is distributed for this experiment. The 274 Dart dependency
+records are unchanged. Android adds ONNX Runtime 1.30.0 (MIT) and OpenCV 4.12.0
+(Apache-2.0); pinned licenses and upstream third-party notices are in `local-ocr/`
+and included in the app. PP-OCRv6 small models are separately downloaded on user
+request, with the RapidAI/RapidOCR v3.9.2 model card declaring Apache-2.0.
+Model URLs, byte sizes, hashes and provenance are recorded in `local-ocr/README.md`.
+No Python/Qt application code, CTD or inpainting weights are bundled.
 
 ## Provenance and compatibility
 
@@ -19,7 +24,7 @@ remain unchanged from the .3 review.
   and are additionally distributed under GPL-3.0-only for this combination,
   as described in `README.md` in this directory.
   Reference: https://www.mozilla.org/en-US/MPL/2.0/FAQ/#q14
-- All 77 Android runtime component records have declared licenses. The
+- The resolved Android runtime component records have declared licenses. The
   inventory includes Apache-2.0 libraries, SQLite's public-domain code, and
   Flutter's BSD license and engine notices.
 - Windows plugin notices include the versioned WebView2 loader, WIL and
@@ -36,6 +41,9 @@ notices, and SHA-256 checksums alongside the binaries. The application source
 includes the lockfile, tests and build/packaging scripts. `BUILDING.md` pins
 the Flutter SDK and engine revisions and provides build instructions.
 Flutter's generated notices and native notices are included in the app.
+The native source supplement also contains the pinned ONNX Runtime and OpenCV
+upstream source archives, preserving their build scripts and external dependency
+definitions. The two production OCR weights are not inside these archives or the APK.
 
 The application source and new repository exclude local credentials, private
 development reports, user-provided test media and inherited publishing jobs.

@@ -8,6 +8,8 @@
             android:name="${applicationName}"
             android:requestLegacyExternalStorage="true"
             android:icon="@mipmap/launcher_icon">
+        <!-- The local OCR path does not initialize ORT's optional network telemetry. -->
+        <provider android:name="ai.onnxruntime.TelemetryInitializer" tools:node="remove" />
         <activity
                 android:name=".MainActivity"
                 android:exported="true"

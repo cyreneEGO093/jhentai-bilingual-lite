@@ -7,6 +7,8 @@ gradle.projectsEvaluated {
     if (app == null) return // Flutter's included Gradle-plugin build has no app.
     app.tasks.register('bilingualDependencyReport') {
         doLast {
+            // Collect after a release build has cached the Maven binaries.
+            // Resolving all artifact variants here is ambiguous for Flutter projects.
             def components = app.configurations.releaseRuntimeClasspath.incoming.resolutionResult.allComponents
             def modules = components.findAll {
                 it.id instanceof org.gradle.api.artifacts.component.ModuleComponentIdentifier

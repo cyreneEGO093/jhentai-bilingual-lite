@@ -4,6 +4,8 @@ import 'translation_settings.dart';
 import 'translation_store.dart';
 import 'translation_widgets.dart';
 import 'translation_client.dart';
+import 'local_ocr.dart';
+import 'package:dio/dio.dart';
 
 Future<void> openTranslationSettings(BuildContext context) =>
     Navigator.of(context).push<void>(
@@ -27,6 +29,9 @@ class _TranslationSettingsPageState extends State<TranslationSettingsPage> {
   double _fontSize = 16;
   double _scale = 1;
   TranslationClient? _testingClient;
+  CancelToken? _download;
+  double _downloadProgress = 0;
+  bool _modelsReady = false;
 
   @override
   void initState() {
@@ -49,16 +54,68 @@ class _TranslationSettingsPageState extends State<TranslationSettingsPage> {
         _message = translationStore.loadError;
         _loaded = true;
       });
+      _refreshModels();
     });
   }
 
   @override
   void dispose() {
+    _download?.cancel();
     _testingClient?.dispose();
     for (final c in _fields.values) {
       c.dispose();
     }
     super.dispose();
+  }
+
+  Future<void> _refreshModels() async {
+    if (!localOcr.supported) {
+      return;
+    }
+    try {
+      final state = await localOcr.status();
+      if (mounted) {
+        setState(() => _modelsReady = state['ready'] == true);
+      }
+    } catch (_) {
+      if (mounted) {
+        setState(() => _modelsReady = false);
+      }
+    }
+  }
+
+  Future<void> _manageModels({bool remove = false}) async {
+    final token = CancelToken();
+    setState(() {
+      _download = token;
+      _downloadProgress = 0;
+      _message = null;
+    });
+    try {
+      if (remove) {
+        await localOcr.remove();
+      } else {
+        await localOcr.install(token, (value) {
+          if (mounted) {
+            setState(() => _downloadProgress = value);
+          }
+        });
+      }
+      if (mounted) {
+        setState(
+            () => _message = remove ? '已删除本地模型。' : '模型校验完成，可保存并使用本地 OCR 模式。');
+      }
+    } catch (error) {
+      if (mounted) {
+        setState(() => _message =
+            token.isCancelled ? '模型下载已取消。' : translationError(error));
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _download = null);
+        await _refreshModels();
+      }
+    }
   }
 
   TranslationSettings _value() => TranslationSettings.fromJson({
@@ -84,7 +141,7 @@ class _TranslationSettingsPageState extends State<TranslationSettingsPage> {
           final models = await client.models(value);
           if (mounted) {
             setState(() => _message =
-                '连接成功，服务提供 ${models.length} 个模型。${models.contains(value.visionModel) ? '' : '当前图片模型未出现在列表中，请核对名称及视觉能力。'}');
+                '连接成功，服务提供 ${models.length} 个模型。${value.imageBackend == 'localOcr' ? (models.contains(value.textModel) ? '' : '当前文本模型未出现在列表中，请核对名称。') : (models.contains(value.visionModel) ? '' : '当前图片模型未出现在列表中，请核对名称及视觉能力。')}');
           }
         } finally {
           client.dispose();
@@ -148,12 +205,60 @@ class _TranslationSettingsPageState extends State<TranslationSettingsPage> {
                       padding: const EdgeInsets.all(20),
                       children: [
                         const Text(
-                            '点击翻译时，所选文字或压缩图片、作品背景和术语表将发送到下面配置的 API 服务。API Key 由用户提供，调用可能收费。模型需自行支持所选内容；图片模型必须支持视觉输入。'),
+                            '点击翻译时，文字及翻译配置会发送到下面的 API 服务；视觉模式还会发送压缩图片，本地 OCR 模式只发送识别文字。API Key 由用户提供，调用可能收费。视觉模式的图片模型必须支持图片输入。'),
+                        const SizedBox(height: 20),
+                        DropdownButtonFormField<String>(
+                          key: const Key('translation-imageBackend'),
+                          initialValue: _fields['imageBackend']!.text,
+                          decoration:
+                              const InputDecoration(labelText: '图片翻译方式'),
+                          items: [
+                            const DropdownMenuItem(
+                                value: 'vision', child: Text('视觉模型（默认）')),
+                            DropdownMenuItem(
+                                value: 'localOcr',
+                                enabled: localOcr.supported,
+                                child: const Text('手机本地 OCR + 文本翻译（实验）')),
+                          ],
+                          onChanged: (value) {
+                            if (value != null) {
+                              setState(
+                                  () => _fields['imageBackend']!.text = value);
+                            }
+                          },
+                        ),
+                        if (localOcr.supported) ...[
+                          const SizedBox(height: 12),
+                          const Text(
+                              '本地模式：图片留在手机，只发送识别出的文字、作品背景和术语表。下载约 30 MB 模型需联网（ModelScope），完成后识别可离线，文本翻译仍需 API。适合中日英印刷对白，复杂排版可能漏字；不会自动上传图片兜底。'),
+                          Text(_modelsReady
+                              ? 'OCR 模型已下载（运行前再次校验）'
+                              : '尚未下载完整 OCR 模型'),
+                          Wrap(spacing: 8, children: [
+                            OutlinedButton(
+                                key: const Key('ocr-download'),
+                                onPressed:
+                                    _download != null ? null : _manageModels,
+                                child: const Text('下载／校验模型')),
+                            TextButton(
+                                onPressed: _download != null
+                                    ? null
+                                    : () => _manageModels(remove: true),
+                                child: const Text('删除模型')),
+                            if (_download != null)
+                              TextButton(
+                                  onPressed: () => _download?.cancel(),
+                                  child: const Text('取消下载')),
+                          ]),
+                          if (_download != null)
+                            LinearProgressIndicator(value: _downloadProgress),
+                        ],
                         const SizedBox(height: 20),
                         _field('baseUrl', 'API 地址', max: 400),
                         _field('apiKey', 'API Key（系统安全存储）', max: 1000),
                         _field('textModel', '文本模型', max: 200),
-                        _field('visionModel', '图片模型', max: 200),
+                        _field('visionModel', '图片模型',
+                            max: 200, hint: '仅视觉模式使用；本地 OCR 使用上方的文本模型。'),
                         _field('targetLang', '目标语言', max: 80),
                         _field('context', '作品背景', lines: 3, max: 500),
                         _field('glossary', '术语表',

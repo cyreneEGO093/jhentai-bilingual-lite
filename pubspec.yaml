@@ -2,7 +2,7 @@ name: jhentai
 description: Unofficial JHenTai derivative with Bilingual Lite translation
 
 publish_to: 'none'
-version: 8.0.16-bilingual.5+339
+version: 8.0.16-bilingual.6-ocr.1+340
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -181,3 +181,4 @@ flutter:
     - NOTICE
     - LICENSES/android-notices.txt
     - LICENSES/windows-native-notices.txt
+    - LICENSES/local-ocr/

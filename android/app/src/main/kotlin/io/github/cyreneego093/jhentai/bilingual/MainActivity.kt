@@ -17,9 +17,11 @@ import io.flutter.plugins.GeneratedPluginRegistrant
 class MainActivity : FlutterFragmentActivity() {
     private var interceptVolumeEvent = false
     private lateinit var volumeMethodChannel: MethodChannel
+    private var localOcr: LocalOcrChannel? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine)
+        localOcr = LocalOcrChannel(applicationContext, flutterEngine.dartExecutor.binaryMessenger)
 
         volumeMethodChannel = MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
@@ -70,6 +72,7 @@ class MainActivity : FlutterFragmentActivity() {
     }
 
     override fun onDestroy() {
+        localOcr?.dispose()
         volumeMethodChannel.setMethodCallHandler(null)
         super.onDestroy()
     }

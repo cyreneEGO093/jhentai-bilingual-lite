@@ -45,9 +45,15 @@ flutter build apk -t lib/src/main.dart --release --split-per-abi --target-platfo
 
 输出位于 `build/app/outputs/flutter-apk/`。普通 Android 手机通常使用 arm64-v8a 包。独立应用 ID 为 `io.github.cyreneego093.jhentai.bilingual`；同一衍生版的后续更新需使用同一签名证书。签名与 ZIP 时间戳可导致字节差异，不影响从同一源码复现功能。
 
+Android OCR 实验版新增 Maven 依赖 ONNX Runtime Android `1.30.0` 与 OpenCV `4.12.0`，由 Gradle 下载。构建无需 OCR 模型或 Python；模型只在用户主动下载时存入应用私有目录。来源、版本与模型哈希见 `LICENSES/local-ocr/README.md`。发布仅 Android 的实验版时，给下方打包命令添加 `--android-only`，避免把旧 Windows 包当成本次构建。
+
+保留 `android/app/proguard-rules.pro` 的 JNI 保留规则；ONNX Runtime 的正式构建要求见 https://onnxruntime.ai/docs/build/android.html 。应用清单主动移除 ONNX Runtime 的遥测初始化 provider，推理前调用 `setTelemetry(false)`；最终合并清单应无该 provider。
+
 ## 原生集成测试
 
 测试使用程序生成的图片和设备内回环 HTTP 模拟 API，不消耗真实 API 额度，不访问真实漫画站点。
+
+额外的 `integration_test/local_ocr_test.dart` 使用真实 Android OCR 模型。仅在独立调试安装上测试：先编译并安装上述 x64 debug APK，再按 `LICENSES/local-ocr/README.md` 下载、校验两个模型；使用 `adb -s <设备ID> push <模型文件> /data/local/tmp/<文件名>`，然后 `adb -s <设备ID> shell run-as io.github.cyreneego093.jhentai.bilingual mkdir -p no_backup/bilingual-ocr-v1` 和 `adb -s <设备ID> shell run-as io.github.cyreneego093.jhentai.bilingual cp /data/local/tmp/<文件名> no_backup/bilingual-ocr-v1/<文件名>`。对两个文件分别执行，最后运行 `flutter test integration_test/local_ocr_test.dart -d <设备ID>`。该测试使用合成英/日文，核对原生识别、框选坐标、取消后重试、模型损坏拦截和文字 API 覆层；损坏测试会在 finally 中恢复文件，不应用于正式安装。真实模型网络下载和实体手机性能需另行验证。
 
 ```text
 flutter test integration_test/translation_smoke_test.dart -d windows
@@ -65,7 +71,7 @@ flutter test integration_test/translation_smoke_test.dart -d <Android设备ID>
 
 完成测试后，使用 Python 3.10 或更高版本收集本次解析到的依赖源码和许可证，再打包两个平台。输出目录应在工程目录之外：
 
-如修改 Android 依赖，先在 `android/` 内运行 `gradlew -I ../tool/android_dependency_inventory.gradle :app:bilingualDependencyReport -Ptarget-platform=android-arm64`（Windows 使用 `gradlew.bat`），再回到工程根目录执行 `python tool/collect_android_notices.py --gradle-cache <本机 GRADLE_USER_HOME>`。审核新清单后重新构建，让许可资产进入 APK。现有源码包已包含本版本的许可清单。
+如修改 Android 依赖，先完成一次上述 release 构建，使 Maven 二进制进入本机缓存；然后在 `android/` 内运行 `gradlew -I ../tool/android_dependency_inventory.gradle :app:bilingualDependencyReport -Ptarget-platform=android-arm64`（Windows 使用 `gradlew.bat`），再回到工程根目录执行 `python tool/collect_android_notices.py --gradle-cache <本机 GRADLE_USER_HOME>`。审核新清单后重新构建，让许可资产进入 APK。现有源码包已包含本版本的许可清单。
 
 ```text
 python tool/collect_licenses.py --sources ../release/dependency-sources.zip

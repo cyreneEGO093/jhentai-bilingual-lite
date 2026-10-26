@@ -117,6 +117,9 @@ Future<void> main(List<String> args) async {
     yield LicenseEntryWithLineBreaks(['JHenTai Bilingual Lite provenance'], await rootBundle.loadString('NOTICE'));
     yield LicenseEntryWithLineBreaks(['Android native dependencies'], await rootBundle.loadString('LICENSES/android-notices.txt'));
     yield LicenseEntryWithLineBreaks(['Windows native dependencies'], await rootBundle.loadString('LICENSES/windows-native-notices.txt'));
+    for (final name in ['README.md', 'onnxruntime-LICENSE.txt', 'onnxruntime-ThirdPartyNotices.txt', 'opencv-LICENSE.txt', 'opencv-ThirdPartyNotices.txt', 'RapidOCR-LICENSE.txt', 'RapidOCR-model-card.md']) {
+      yield LicenseEntryWithLineBreaks(['Experimental local OCR: $name'], await rootBundle.loadString('LICENSES/local-ocr/$name'));
+    }
   });
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

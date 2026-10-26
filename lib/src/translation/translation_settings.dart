@@ -7,6 +7,7 @@ class TranslationSettings {
   final String apiKey;
   final String textModel;
   final String visionModel;
+  final String imageBackend;
   final String targetLang;
   final String context;
   final String glossary;
@@ -22,6 +23,7 @@ class TranslationSettings {
     this.apiKey = '',
     this.textModel = 'deepseek/deepseek-v4.1-flash',
     this.visionModel = 'deepseek/deepseek-v4.1-flash',
+    this.imageBackend = 'vision',
     this.targetLang = '简体中文',
     this.context = '',
     this.glossary = '',
@@ -48,6 +50,7 @@ class TranslationSettings {
       apiKey: apiKey,
       textModel: read('textModel', defaults.textModel),
       visionModel: read('visionModel', defaults.visionModel),
+      imageBackend: value['imageBackend'] == 'localOcr' ? 'localOcr' : 'vision',
       targetLang: read('targetLang', defaults.targetLang),
       context: read('context', ''),
       glossary: read('glossary', ''),
@@ -65,6 +68,7 @@ class TranslationSettings {
         'baseUrl': baseUrl,
         'textModel': textModel,
         'visionModel': visionModel,
+        'imageBackend': imageBackend,
         'targetLang': targetLang,
         'context': context,
         'glossary': glossary,
@@ -100,7 +104,7 @@ class TranslationSettings {
       throw const FormatException('请先在翻译设置中填写有效的 API Key。');
     }
     if (textModel.trim().isEmpty ||
-        visionModel.trim().isEmpty ||
+        (imageBackend != 'localOcr' && visionModel.trim().isEmpty) ||
         targetLang.trim().isEmpty ||
         textModel.length > 200 ||
         visionModel.length > 200 ||
